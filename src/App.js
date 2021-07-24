@@ -1,10 +1,13 @@
+import Calculator from './components/Calculator'
+import Logo from './images/logo.svg'
 import './App.sass'
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <img src={ Logo } alt="SPLITTER" />
+      <Calculator />
+    </>
   )
 }
 
