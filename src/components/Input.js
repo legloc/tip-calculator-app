@@ -4,7 +4,7 @@ const Input = ({ title, icon }) => {
       <label className="group-wrapper">
         <span className="group-title">{ title }</span>
         <div className={ `input-wrapper icon-${ icon }` }>
-          <input type="text" placeholder="0.00" />
+          <input type="text" placeholder="0" />
         </div>
       </label>
     </div>

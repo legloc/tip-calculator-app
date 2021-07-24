@@ -58,7 +58,46 @@ body
         transition: border .1s ease-in-out
 
         &:focus
-          border: 2px #00494d solid
+          border: 2px #26c0ab solid
+
+.radio-group
+  text-align: left
+
+  .group-title
+    font-size: .6em
+    font-weight: 700
+    color: #5e7a7d
+    margin-bottom: 5px
+
+  .group-wrapper
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 10px
+    margin-bottom: 1em
+
+.radio-wrapper
+  input
+    display: none
+
+    &:checked + label
+      background: #26c2ad
+      color: #00494d
+
+  label
+    display: block
+    background: #00494d
+    border-radius: 5px
+    font-size: 1em
+    font-weight: 700
+    color: #f4fafa
+    text-align: center
+    padding: 5px 15px
+    cursor: pointer
+    transition: all .1s ease-in-out
+
+    &:hover
+      background: #9fe8df
+      color: #00494d
 
 .calculator
   display: flex
