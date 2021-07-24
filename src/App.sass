@@ -12,6 +12,54 @@ body
   *
     box-sizing: border-box
 
+.input-group
+  .group-wrapper
+    display: flex
+    flex-direction: column
+    text-align: left
+    margin-bottom: 1em
+
+    .group-title
+      font-size: .6em
+      font-weight: 700
+      color: #5e7a7d
+      margin-bottom: 5px
+
+    .input-wrapper
+      position: relative
+
+      &:before
+        content: ''
+        position: absolute
+        left: 10px
+        top: 5px
+        bottom: 5px
+        width: 1em
+        z-index: 1
+
+      &.icon-dollar:before
+        background: url('./images/icon-dollar.svg') center no-repeat
+
+      &.icon-person:before
+        background: url('./images/icon-person.svg') center no-repeat
+
+      input
+        position: relative
+        background: #f4fafa
+        border: 2px transparent solid
+        border-radius: 5px
+        font-family: inherit
+        font-size: 1em
+        font-weight: 700
+        text-align: right
+        padding: 5px 15px
+        color: #00494d
+        outline: none
+        transition: border .1s ease-in-out
+
+        &:focus
+          border: 2px #00494d solid
+
 .calculator
   display: flex
   justify-content: space-between
@@ -24,8 +72,10 @@ body
 
   .wrapper-input
     width: 100%
+    margin-right: 15px
 
   .wrapper-output
     background: #00494d
     border-radius: 15px
     width: 100%
+    margin-left: 15px
