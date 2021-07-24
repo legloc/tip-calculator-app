@@ -1,5 +1,6 @@
 import Input from './Input'
 import RadioGroup from './RadioGroup'
+import OutputGroup from './OutputGroup'
 
 const Calculator = () => {
   return (
@@ -9,7 +10,13 @@ const Calculator = () => {
         <RadioGroup title="Select tip %" name="radio-tip" inputs={[ '5%', '10%', '15%', '25%', '50%' ]} />
         <Input title="Person" icon="person" />
       </div>
-      <div className="wrapper-output"></div>
+      <div className="wrapper-output">
+        <div>
+          <OutputGroup title="Tip amount" amount="0.00" />
+          <OutputGroup title="Total" amount="0.00" />
+        </div>
+        <button className="btn-reset">Reset</button>
+      </div>
     </div>
   )
 }

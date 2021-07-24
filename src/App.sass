@@ -103,7 +103,7 @@ body
   display: flex
   justify-content: space-between
   background: #fff
-  width: 700px
+  width: 800px
   height: 400px
   border-radius: 30px
   margin-top: 1em
@@ -114,7 +114,50 @@ body
     margin-right: 15px
 
   .wrapper-output
+    display: flex
+    flex-direction: column
+    justify-content: space-between
     background: #00494d
     border-radius: 15px
     width: 100%
     margin-left: 15px
+    padding: 30px
+
+    .output-group
+      display: flex
+      justify-content: space-between
+      align-items: center
+      text-align: left
+      margin-bottom: 1em
+
+      .title, .subtitle
+        display: block
+        font-size: .6em
+        font-weight: 700
+
+      .title
+        color: #f4fafa
+
+      .subtitle
+        color: #7f9c9f
+
+      .amount
+        font-size: 1.8em
+        font-weight: 700
+        color: #26c0ab
+
+    .btn-reset
+      background: #26c0ab
+      border: none
+      border-radius: 5px
+      font-family: inherit
+      font-size: 1em
+      font-weight: 700
+      text-transform: uppercase
+      color: #00494d
+      width: 100%
+      cursor: pointer
+      transition: all .1s ease-in-out
+
+      &:hover
+        background: #9fe8df

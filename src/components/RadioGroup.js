@@ -6,7 +6,7 @@ const RadioGroup = ({ name, title, inputs }) => {
       <span className="group-title">{ title }</span>
       <div className="group-wrapper">
         { inputs.map(input => (
-          <Radio title={ input } id={ `radio${ input }` } name={ name } />
+          <Radio key={ input } title={ input } id={ `radio${ input }` } name={ name } />
         )) }
       </div>
     </div>
