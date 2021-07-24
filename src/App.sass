@@ -13,17 +13,36 @@ body
     box-sizing: border-box
 
 .input-group
+  &.input-error
+    .group-wrapper
+      .group-header
+        .group-error
+          display: block
+
+    .input-wrapper
+      input
+        border: 2px #E53935 solid !important
+
   .group-wrapper
     display: flex
     flex-direction: column
     text-align: left
     margin-bottom: 1em
 
-    .group-title
-      font-size: .6em
-      font-weight: 700
-      color: #5e7a7d
+    .group-header
+      display: flex
+      justify-content: space-between
+      align-items: center
       margin-bottom: 5px
+
+      .group-title, .group-error
+        font-size: .6em
+        font-weight: 700
+        color: #5e7a7d
+
+      .group-error
+        display: none
+        color: #E53935
 
     .input-wrapper
       position: relative
@@ -48,6 +67,7 @@ body
         background: #f4fafa
         border: 2px transparent solid
         border-radius: 5px
+        width: 100%
         font-family: inherit
         font-size: 1em
         font-weight: 700
@@ -59,6 +79,10 @@ body
 
         &:focus
           border: 2px #26c0ab solid
+
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+          -webkit-appearance: none
+          margin: 0
 
 .radio-group
   text-align: left
