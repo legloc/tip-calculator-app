@@ -27,6 +27,7 @@ const Calculator = () => {
         <Input
           title="Bill"
           icon="dollar"
+          value={ state.bill }
           isValid={ state.bill !== 0 }
           onChange={ e => setState({ ...state, bill: e  }) } />
         
@@ -38,6 +39,7 @@ const Calculator = () => {
         <Input
           title="Person"
           icon="person"
+          value={ state.persons }
           isValid={ state.persons !== 0 }
           onChange={ e => setState({ ...state, persons: e }) } />
       </div>
@@ -54,7 +56,7 @@ const Calculator = () => {
         </div>
         <button
           className="btn-reset"
-          onClick={ () => setState({ bill: 0, tip: 0, persons: 0 }) }>Reset</button>
+          onClick={ () => setState({ ...state, bill: '', persons: '' }) }>Reset</button>
       </div>
 
     </div>
