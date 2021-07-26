@@ -5,19 +5,19 @@ import OutputGroup from './OutputGroup'
 
 const Calculator = () => {
   const [state, setState] = useState({
-    bill: null,
-    tip: null,
-    persons: null,
+    bill: '',
+    tip: '',
+    persons: '',
   })
 
   const countTotal = () => {
     let count = state.bill * state.tip * 0.01
-    return isNaN(count) ? 0 : count
+    return isNaN(count) ? 0 : !isFinite(count) ? 0 : count.toFixed(2)
   }
 
   const countTipAmount = () => {
     let count = countTotal() / state.persons
-    return isNaN(count) ? 0 : count
+    return isNaN(count) ? 0 : !isFinite(count) ? 0 : count.toFixed(2)
   }
 
   return (
